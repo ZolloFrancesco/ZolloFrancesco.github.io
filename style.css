@@ -1,0 +1,695 @@
+body, html{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    z-index: 10;
+    fill: #ca2828;
+    max-width: 100%;
+}
+
+.videoSfondo{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    opacity: 1;
+}
+
+.sezioneApertura{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #FFFFFF;
+    z-index: 1;
+    height: 100vh;
+
+}
+
+.titoloApertura{
+    font-size: 4vw;
+    margin: auto;
+    position: relative;
+    max-width: 60%;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.sottoTitoloApertura{
+    font-size: 2vw;
+    margin: auto;
+    max-width: 60%;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+/* proprieta' per transizione di focus */
+.sezioneApertura.inFocus .titoloApertura{
+    transform: scale(1.2);
+    opacity: 1;
+}
+.sezioneApertura.inFocus .sottoTitoloApertura{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.testoBlu{
+    color: #ca2828;
+}
+
+.pannello1{
+    height: 100vh;
+    width: 100%;
+    background: #BCBCBC;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.titoloPannello1{
+    z-index: 2;
+    position: absolute;
+    margin-bottom: 30%;
+    font-size: 8vw;
+    color: #FFFFFF;
+}
+
+.imgPannello1{
+    max-width: 100%;
+}
+
+.schedaTecnica{
+    height: 100vh;
+    width: 100%;
+    background: #BCBCBC;
+    position: relative;
+    z-index: 2;
+}
+
+.imgSchedaTecnica{
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.asterisco{
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    z-index: 3;
+    width: 100%;
+    bottom: 0;
+    /* proprieta' per transizione di focus */
+    opacity: 1;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.containerIcona{
+    position: absolute;
+    right: 10%;
+    top: 15%;
+    scale: 1;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.titoloSchedaTecnica{
+    position: fixed;
+    font-size: 2vw;
+    top: 0;
+    left: 0;
+    margin-left: 20%;
+    margin-top: 15%;
+    max-width: 35%;
+    z-index: 3;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.titoloSchedaTecnica strong{
+    color: #0F2A4C;
+}
+
+.sceltaColori{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    /* proprieta' per transizione di focus */
+    opacity: 0;
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+/* proprieta' per transizione di focus */
+.schedaTecnica.inFocus .titoloSchedaTecnica{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* proprieta' per transizione di focus */
+.schedaTecnica.inFocus .containerIcona{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* proprieta' per transizione di focus */
+.schedaTecnica.inFocus .imgSchedaTecnica{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* proprieta' per transizione di focus */
+.schedaTecnica.inFocus .sceltaColori{
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+/* ===============CAROSELLO=============== */
+.statoAvanzamento{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    background: #BCBCBC;
+    padding: 30px;
+}
+
+.sottoTitoloStatoAvanzamento{
+    max-width: 100%;
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    font-size: 2vw;
+    font-weight: normal;
+}
+
+.statoAvanzamentoNuovo{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #BCBCBC;
+}
+
+.swiper {
+  width: 80%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.titoloSezione{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: #BCBCBC;
+}
+
+.videoInfraSezione{
+    justify-content: center;
+    margin: auto;
+}
+
+/* ====================== FINE CAROSELLO ====================== */
+
+
+/* ====================== FAQ ====================== */
+
+.containerFAQ{
+    position: relative;
+    width: 100%;
+    height: 200vh;
+    background: #BCBCBC;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.intestazioneFAQ{
+    color: #0F2A4C;
+    font-size: 6vw;
+    text-align: center;
+    padding: 20px;  
+}
+
+.tab{
+    width: 80%;
+    position: relative;
+    background: gray;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.05);
+    border-radius: 5px;
+}
+
+.containerFAQ .tab input{
+    appearance: none;
+}
+
+.containerFAQ .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.containerFAQ .tab label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0,0,0,0.1);
+    transition: transform 1s;
+}
+
+.containerFAQ .tab:hover label::after{
+    color: #333;
+}
+
+.containerFAQ .tab input:checked ~ label::after{
+    transform: rotate(135deg);
+}
+
+.containerFAQ .tab label .numeroFAQ{
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-size: 1.25em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.containerFAQ .tab label .domandaFAQ{
+    position: relative;
+    font-weight: 500;
+    color: #333;
+}
+
+.containerFAQ .tab .content{
+    max-height: 0;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.containerFAQ .tab input:checked ~ .content{
+    max-height: 100vh;
+}
+
+.containerFAQ .tab .content .rispostaFAQ{
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+}
+
+@media screen and (max-width: 600px) {
+    .titoloApertura{
+        font-size: 8vw;
+        margin-top: 35%;
+    }
+    .sottoTitoloApertura{
+        font-size: 4vw;
+        max-width: 70%;
+    }
+    .titoloSchedaTecnica{
+        font-size: 5vw;
+        margin-top: 40%;
+    }
+    .titoloPannello1{
+        font-size: 12vw;
+        max-width: 80%;
+        top: 20%;
+    }
+
+    .containerIcona{
+        scale: 0.6;
+        top: 30%;
+    }
+    .containerIconaDoppia{
+        scale: 0.6;
+    }
+    .sceltaColori{
+        scale: 0.5;
+        align-items: center;
+        max-width: 80%;
+    }
+    nav{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu{
+        display: inline-flex;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu li{
+        font-size: 2vw;
+        width: 25%;
+    }
+
+    .menu li a{
+        display: block;
+    }
+
+    .toggle{
+        right: 20px;
+        color: #ca2828;
+        margin: auto;
+    }
+
+    .intestazioneFAQ{
+        font-size: 10vw;
+    }
+
+    .sottoTitoloStatoAvanzamento{
+        padding: 20px;
+        font-size: 5vw;
+    }
+
+    .asterisco{
+        font-size: 2.5vw;
+    }
+
+    .titoloSchedaTecnicaColonna{
+        font-size: 2vw;
+        max-width: 50%;
+    }
+    .riga{
+        top: 10%;
+        width: 90%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    nav a{
+        font-size: 4vw;
+    }
+    
+    .menu li{
+        margin-right: 1vw;
+        margin-left: 1vw;
+        padding-left: 0px;
+    }
+    .swiper {
+        height: 200px;
+    }
+
+    .whatsappFloat{
+        width:45px;
+        height:45px;
+        background:#25d366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-radius:50%;
+        color:#ffffff;
+        font-size:35px;
+        box-shadow: 2px 2px 5px #999;
+        position:fixed;
+        right:40px;
+        bottom: 40px;
+        outline: blue;
+        border: none;
+        z-index: 3;
+        opacity: 1;
+    }
+}
+
+/* ============ FOOTER =========== */
+footer{
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    background: #BCBCBC;
+}
+
+.container__footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.box__footer{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.box__footer .logo img{
+    width: 200px;
+}
+
+.box__footer .terms{
+    max-width: 350px;
+    margin-top: 20px;
+    font-weight: 500;
+    color: #7a7a7a;
+}
+
+.box__footer h2{
+    margin-bottom: 30px;
+    color: #343434;
+    font-weight: 700;
+}
+
+.box__footer a{
+    margin-top: 10px;
+    color: #7a7a7a;
+    font-weight: 600;
+}
+
+.box__footer a:hover{
+    opacity: 0.8;
+}
+
+.box__copyright{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding: 0px 40px;
+}
+
+.box__copyright p{
+    margin-top: 20px;
+    color: #7a7a7a;
+}
+
+.box__copyright hr{
+    border: none;
+    height: 1px;
+    background-color: #7a7a7a;
+}
+
+/* ============ NAVBAR =========== */
+
+nav{
+    display: flex;
+    position: relative;
+    background: #222;
+    align-items: center;
+    z-index: 2;
+}
+
+nav a{
+    color: #FFFFFF;
+}
+
+nav a:hover{
+    color: #ef4b3f;
+}
+
+.logoNav{
+    flex: 1;
+}
+
+.logoNav a{
+    align-items: center;
+    font: 20px;
+}
+
+.logoNav a:hover{
+    color: #fff;
+}
+
+.logoNav img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.menu{
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: capitalize;
+}
+
+.menu li{
+    display: inline;
+    justify-content: space-between;
+    font-size: 2vw;
+    margin-right: 2vw;
+    margin-left: 3vw;
+}
+
+
+a:link, a:visited, a:hover, a:active { 
+    text-decoration: none;
+}
+
+/* =============== FAQ =============*/
+
+:root{
+    --shadow-1:  0 .125rem .25rem rgba(0,0,0,.075);
+    --shadow-2:  0 .5rem 1rem rgba(0,0,0,.15);
+    --shadow-3:  0 1rem 3rem rgba(0,0,0,.175);
+}
+
+li{
+    list-style-type: none;
+}
+
+.accordion{
+    background: #BCBCBC;
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 3;
+}
+.accordion::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.accordion-items {
+    width: 90%;
+    margin-bottom: 3vw;
+
+}
+.accordion-items .accordion-header {
+    background: #999999;
+    color: #FEFEFE;
+    padding: 1.5vw;
+    display: flex;
+    align-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.accordion-items .accordion-header::after {
+    content: "^";
+    font-weight: 700;
+    position: absolute;
+    top: 19px;
+    right: 20px;
+    font-size: 3vw;
+    color: #0F2A4C;
+    transition: all .3s;
+}
+.accordion-items .accordion-header.active::after{
+    transform: rotate(180deg);
+    color: #ca2828;
+}
+
+.accordion-items .accordion-header.active{
+    background: #0F2A4C;
+}
+.accordion-items .accordion-header.active span{
+    color: #0F2A4C;
+}
+.accordion-items .accordion-header span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    clip-path: polygon(60% 0, 100% 50%, 60% 100%, 0% 100%, 0% 0%);
+    width: 60px;
+    background: #0F2A4C;
+    color: #000;
+    height: 100%;
+    font-size: 20px;
+    transition: all .3s;
+}
+.accordion-items .accordion-header span i {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.accordion-items .accordion-header h2{
+    font-weight: normal;
+    padding-left: 75px;
+    padding-right: 20px;
+    color: #000;
+    user-select: none;
+}
+.accordion-items .accordion-body{
+    height: 0;
+    overflow: hidden;
+    transition: all .3s;
+}
+.accordion-items .accordion-body .accordion-content{
+    padding: 20px;
+    border-top: 0;
+    font-weight: normal;
+}
+.accordion-items .accordion-body .accordion-content p{
+    font-weight: normal;
+    font-size: 1.5vw;
+}
+.accordion-items .accordion-body .accordion-content p a{
+    color: #fff;
+}
+
+/* ========== PULSANTE FLOAT ==================*/
+.whatsappFloat{
+    
+}
